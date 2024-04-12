@@ -54,12 +54,12 @@ export default function Home() {
   const [search, setSearch] = useState("")
   return (
     <section className="w-screen h-screen flex items-center justify-center bg-black/50 backdrop-blur-[1px] p-10">
-      <div className="w-2/5 px-8 p-5  text-white flex flex-col justify-center items-center bg-[#666565b4] gap-8 rounded-3xl shadow-[0px_0px_20px_rgba(0,0,0,1)]">
-        <h1 className="text-3xl">Lista de Tarefas</h1>
+      <div className="desktop:w-2/5  px-8 p-5  mobile:w-11/12  text-white flex flex-col justify-center items-center bg-[#666565b4] gap-4 rounded-3xl shadow-[0px_0px_20px_rgba(0,0,0,1)]">
+        <h1 className="desktop:text-2xl mobile:text-base">Lista de Tarefas</h1>
         <Search search={search} setSearch={setSearch} />
         <Filter filter={filter} setFilter={setFilter} setSort={setSort} />
-        <div className="h-[32vh] box-border  w-11/12 overflow-y-auto scrollbar-hide">
-          <div className="todo-list w-12/12 box-border pb-8 border-b-[2px] border-black  flex flex-col gap-4  " >
+        <div className="h-[32vh] box-border w-11/12  overflow-y-auto scrollbar-hide">
+          <div className="todo-list w-12/12 mobile:text-sm box-border pb-8 border-b-[2px] border-black  flex flex-col gap-4  " >
             {todos.
               filter((todo) =>
                 filter === "all"

@@ -20,7 +20,7 @@ const TodoForm = ({ addTodo }) => {
 
     return (
         <div className="w-11/12" >
-            <h2 className="text-2xl mb-2">
+            <h2 className="mobile:text-sm mb-2">
                 Criar Tarefa:
             </h2>
             <form onSubmit={handleSubmit}>
